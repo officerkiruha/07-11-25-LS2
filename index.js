@@ -1,12 +1,12 @@
 const express = require('express');
 require('dotenv').config();
-const app = express();
 const port = process.env.PORT;
+const api = process.env.HOST;
+const app = express();
+app.use(express.static(__dirname));
 
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname+'/public/index.html')
+})
 
-
-app.get()
-
-
-
-app.listen(port,()=>{console.log(`htpp://${process.env.HOST}:${port}`)});
+app.listen(port,()=>{console.log(`http://${api}:${port}`)});
