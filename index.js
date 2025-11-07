@@ -1,10 +1,12 @@
 const express = require('express');
+require('dotenv').config();
 const app = express();
-const port = 3700;
-
-
-//app.get()
+const port = process.env.PORT;
 
 
 
-app.listen(port,()=>{console.log(`htpp://localhost:${port}`)});
+app.get()
+
+
+
+app.listen(port,()=>{console.log(`htpp://${process.env.HOST}:${port}`)});
